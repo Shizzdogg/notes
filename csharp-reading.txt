@@ -1,0 +1,33 @@
+C#
+
+Abstract class:
+Subclasses can implement OR override functionality. A class can only inherit from ONE abstract class.
+
+Interface:- User the 'interface' keyword
+Can only define functionality NOT implement it. A class can implement MULTIPLE interfaces. Classes that inherit from an interface MUST implement functionality from the interface. An interface may not declare instance data such as fields, auto-implemented properties, or property-like events.
+
+Virtual methods:
+Methods which can be overridden by a subclass/implementor.
+
+
+
+Accessibility Levels
+----------------------------
+
+Public member variables:
+Can be accessed outside of the class definition.
+
+Private members:
+Private members are accessible only within the body of the class or the struct in which they are declared
+
+Protected members:
+A protected member of a base class is accessible in a derived class only if the access occurs through the derived class type.
+
+Protected Internal:
+A protected internal member of a base class is accessible from any type within its containing assembly. It is also accessible in a derived class located in another assembly only if the access occurs through a variable of the derived class type.
+
+Internal:
+TODO
+
+Private Protected:
+TODO

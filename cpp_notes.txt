@@ -1,0 +1,18 @@
+Member variables
+----------------
+Member variables live until the object that it belongs to is destroyed.
+
+Member variables are destroyed in the order that they are defined in the class definition.
+
+Member variables should be destroyed in the order that they are created. The compiler attempts to enforce this by failing if the order of the member variables in the constructor initialiser differ from that in the class definition. However, if the member variables are created in the body of the constructor, the compiler will not check this order mismatch and so memory issues can arise (accessing members that have been deleted already etc).
+
+Static Variables
+----------------
+Assigned value will remain throughout the program and available to all functions including all other instances of the same class where variable defined.
+
+Factory Pattern
+---------------
+In Factory pattern, we create object without exposing the creation logic to client and the client use the same common interface to create new type of object.
+The idea is to use a static member-function (static factory method) which creates & returns instances, hiding the details of class modules from user.
+
+Client just needs to make call to library’s factory Create method and pass the type it wants without worrying about the actual implementation of creation of objects.

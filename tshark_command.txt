@@ -1,0 +1,2 @@
+sudo tshark -f "tcp port 6514" -i stk0 -d tcp.port==6514,syslog
+sudo tshark -Tfields -e _ws.col.Info -f "tcp port 6514" -i stk0 -d tcp.port==6514,syslog

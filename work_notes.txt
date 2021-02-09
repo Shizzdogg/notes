@@ -1,0 +1,4 @@
+// bashrc located in ~/.bashrc
+- shell script that bash runs whenever it is started
+- Put commands in this script to set up the shell for use
+- Make changes and then source script to read and execute it for all open shells using 'source ~/.bashrc'

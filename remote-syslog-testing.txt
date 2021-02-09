@@ -1,0 +1,51 @@
+Connecting directly to ctr via maintenance port for management use and data port for remote logging data
+----------------------------------------------
+
+1. Connect maintenance port to port 1 on pc - should be eth1 or eth0 (whichever is not your main wired connection).
+
+2. Set ctr maintenance port to dhcp-server and set dhcp address range as 192.168.31.10 to 192.168.31.15 as per:
+
+running-config:
+CTR8740# show running-config maintenance-port
+maintenance-port ethernet mode dhcp-server
+maintenance-port ethernet dhcp-server-pool start-ip 192.168.31.10
+maintenance-port ethernet dhcp-server-pool end-ip 192.168.31.15
+maintenance-port ethernet host-address ipv4 ip 192.168.31.1
+maintenance-port ethernet host-address ipv4 prefix-length 24
+
+show maintenance port - operational:
+CTR8740# show maintenance-port-status
+maintenance-port-status ethernet mode dhcp-server
+maintenance-port-status ethernet oper-status up
+maintenance-port-status ethernet phys-address 00:e0:e2:a8:ec:c2
+maintenance-port-status ethernet ipv4 ip 192.168.31.1
+maintenance-port-status ethernet ipv4 prefix-length 255.255.255.0
+               CLIENT
+CLIENT IP      NAME        CLIENT MAC         CLIENT EXPIRE
+----------------------------------------------------------------
+192.168.31.10  pc2050-ubu  c4:65:16:aa:80:95  9 days 03:42:34
+
+3. Your maintenance port enc connected to pc should have an ip-address set as per client one above.
+
+4. Configure Ge1 on ctr as per:
+
+CTR8740# show running-config interface GigabitEthernet1/0/1
+interface GigabitEthernet1/0/1
+ enabled
+ forwarding-mode network-layer
+ ipv4 enabled
+ ipv4 forwarding true
+ ipv4 address 192.168.1.2
+  prefix-length 24
+ exit
+exi
+
+5. Connect GE1/01/1 to pc via usb to ethernet connection
+
+6. You might need to set ip-address of GE1 pc side to 192.168.1.1 (or atleast it should be set as so) and will appear on eth2 (or similar).
+
+7. Configure remote-logging with server IP address as above (192.168.1.1).
+
+8. Use "logger" on ctr to log messages to cust log.
+
+9. Can use netcat -ul <port> (for udp) to listen or syslog-ng configuration.
