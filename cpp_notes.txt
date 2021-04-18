@@ -16,3 +16,13 @@ In Factory pattern, we create object without exposing the creation logic to clie
 The idea is to use a static member-function (static factory method) which creates & returns instances, hiding the details of class modules from user.
 
 Client just needs to make call to library’s factory Create method and pass the type it wants without worrying about the actual implementation of creation of objects.
+
+Casting
+-----------------------------------
+
+Dynamic Casting
+---------------
+TODO - undesirable
+
+Static Casting
+--------------

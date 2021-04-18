@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment[en_NZ]=
+Comment=
+Exec=gnome-terminal -x sudo openconnect --juniper vpnnz.aviatnet.com --servercert sha256:d37274ff163ece68557d6f6a941ae8ebc27141a031c95be94a89c85296e17235 
+Name[en_NZ]=Aviat NZ VPN
+Name=Aviat NZ VPN
+Icon=/usr/share/icons/net.pulsesecure.png
+MimeType=
+GenericName[en_NZ]=
+GenericName=
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=

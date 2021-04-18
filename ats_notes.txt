@@ -4,6 +4,11 @@ pytest testcases/ctr8700/test_rsyslog.py --testrig mustafar --type cli
 For running a testcase on standalone setup - make sure to use "--device":
 pytest testcases/ctr8700/test_rsyslog.py --device mustafar --type cli
 
+--no-reserve
+------------
+This option can be used to side-step reservation check. PLEASE USE WITH CAUTION
+
+
 Management interface
 --------------------
 Can specify one of two management interfaces on the command line to pytest:
