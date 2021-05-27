@@ -1,0 +1,33 @@
+
+Focus on bug fixing
+
+Goal 1: deliver release builds
+
+Bug fixing:
+ - Brought in 3 defects at start of sprint:
+ 	- Confd issue where tail-f provided a patch for.
+ 		- Cross team effort to assess viability of patch -> results in hand
+ 		- TBD to accept patch which carries risk
+ 			- alternative wait for tailf release which contains proper fix in a few months time.
+
+ 	- 2 alarm related issues:
+ 		- Alarm status change list truncation
+ 			- Initially blocked waiting for response from tailf
+ 			- decicded on workaround - in progress
+ 		- Premature Ethernet port link down alarm
+ 			- fix in hand
+ 			- waiting on review process
+
+ - Other defects brought in highlights:
+ 	- 2 Hal-manager issues:
+ 		- issue relating to alarm status change list (late entry) - HS making progress
+ 		- other hal-m issue resolved.
+ 	- Couple of issues found 
+ 		- duplicate 
+ 		- rejected as not reproducible.
+ 	- Issue blocking PV+ (netconf notifications) resolved
+
+Other:
+	- 2 SWSTOP issues resolved by Don
+	- ATS issues wrt to traffic outage during swloading
+		- Resolved by Sam and now outage time ~90ms
