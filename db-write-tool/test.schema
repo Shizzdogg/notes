@@ -1,0 +1,7 @@
+PRAGMA journal_mode=wal;
+PRAGMA user_version=3;
+
+CREATE TABLE IF NOT EXISTS test (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      message varchar(200));
+

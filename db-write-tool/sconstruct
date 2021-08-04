@@ -1,0 +1,8 @@
+env = Environment();
+env.Append(LIBS = [
+    'sqlite3',
+    'pthread',
+    ])
+
+env.Program('db-write-spam', 'db-write-loop.cpp')
+
